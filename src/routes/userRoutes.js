@@ -9,6 +9,6 @@ route.get('/', userController.getAll);
 //   res.send('Hello World!')
 // });
 
-route.post('/', (req) => {})
+route.post('/', userController.create)
 
 module.exports = route;
