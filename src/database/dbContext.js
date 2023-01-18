@@ -4,16 +4,22 @@ const DbContext = {
       id: 1,
       name: "João",
       lastName: "da Silva",
+      email:"joaodasilva@email.com",
+      password:"abc123456",
     },
     {
       id: 2,
       name: "Maria",
       lastName: "Pereira",
+      email:"mariapereira@email.com",
+      password:"abc123456",
     },
     {
       id: 3,
       name: "Joaquim",
       lastName: "Araujo",
+      email:"joaquimaraujo@email.com",
+      password:"abc123456",
     },
   ],
 };
