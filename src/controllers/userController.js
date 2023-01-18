@@ -1,10 +1,10 @@
 const dbContext = require('../database/dbContext');
+const users = dbContext.users;
 
 const userController = {
   getAll: function () {
     const [_req, res, next] = arguments;
     try {
-      const users = dbContext.users;
 
       return res.json(users);
     } catch (err) {
@@ -12,11 +12,15 @@ const userController = {
     }
   },
   create: function () {
-    const [_req, res, next] = arguments;
+    const [ req, res, next ] = arguments;
     try {
-      const users = dbContext.users;
+      const {id, name, lastName} = req.body;
 
-      return res.json(users);
+      const newUser = { id, name, lastName };
+      
+      users.push(newUser)
+
+      return res.json(newUser);
     } catch (err) {
       next(err);
     }
