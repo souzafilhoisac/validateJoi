@@ -6,7 +6,7 @@ const userController = {
     const [_req, res, next] = arguments;
     try {
 
-      return res.json(users);
+      return res.status(200).json(users);
     } catch (err) {
       next(err);
     }
@@ -14,13 +14,13 @@ const userController = {
   create: function () {
     const [ req, res, next ] = arguments;
     try {
-      const {id, name, lastName} = req.body;
+      const {id, name, lastName, email, password} = req.body;
 
-      const newUser = { id, name, lastName };
-      
+      const newUser = { id, name, lastName, email, password };
+
       users.push(newUser)
 
-      return res.json(newUser);
+      return res.status(200).json(users);
     } catch (err) {
       next(err);
     }
