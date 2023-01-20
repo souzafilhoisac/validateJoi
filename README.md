@@ -1,6 +1,6 @@
 <div align="center">
 
-# <p>This project is about practice and learn some techs</p>
+# <p>This project is a API with a fake database context to test some techs</p>
 
 [![made in brazil](https://img.shields.io/badge/state%20-bulding-009.svg?style=for-the-badge)]() [![made in brazil](https://img.shields.io/badge/made%20in-brazil-008751.svg?style=for-the-badge)](https://www.google.com/maps/place/brazil)
 
