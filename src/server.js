@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const server = new express();
 
@@ -16,7 +17,8 @@ server.use((req, res, next) => {
   server.use(cors());
   next();
 });
-server.use(express.json());
+server.use(bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: false }));
 server.use(userRoute);
 server.use(errorHandler);
 
